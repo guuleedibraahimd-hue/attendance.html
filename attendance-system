@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      margin-top: 50px;
+    }
+    h1 {
+      color: #0b74de;
+    }
+    button {
+      background-color: #0b74de;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #095ab1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Attendance System</h1>
+  <p>Welcome! Click below to mark your attendance.</p>
+  <button onclick="markAttendance()">Mark Attendance</button>
+
+  <p id="status"></p>
+
+  <script>
+    function markAttendance() {
+      const time = new Date().toLocaleTimeString();
+      document.getElementById('status').innerText = "Attendance marked at " + time;
+    }
+  </script>
+</body>
+</html>
